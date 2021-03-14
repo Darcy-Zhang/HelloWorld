@@ -1,36 +1,27 @@
-/*
- * @Author       : Darcy
- * @Date         : 2021-01-28 00:40:14
- * @LastEditors  : Darcy
- * @LastEditTime : 2021-01-28 20:33:30
- * @FilePath     : \Cpp\Acwing\P2.cpp
- * @Description  : <(￣︶￣)↗[GO!]
- * https://github.com/Darcy-Zhang
- */
+#include <cstdio>
 #include <iostream>
-using namespace std;
 
-const int MAXN = 1005;
-int w[MAXN];       // 重量
-int v[MAXN];       // 价值
-int f[MAXN][MAXN]; // f[i][j], j重量下前i个物品的最大价值
-
-int main() {
-  cout << f[0][0];
-  int n, m;
-  cin >> n >> m;
-  for (int i = 1; i <= n; ++i)
-    cin >> w[i] >> v[i];
-
-  for (int i = 1; i <= n; ++i)
-    for (int j = 1; j <= m; ++j) {
-      //  当前重量装不进，价值等于前i-1个物品
-      if (j < w[i])
-        f[i][j] = f[i - 1][j];
-      // 能装，需判断
-      else
-        f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]] + v[i]);
-    }
-  cout << f[n][m];
-  return 0;
+int main()
+{
+    using namespace std;
+    int solu[1001][1001];
+    for (int m = 0; m < 1001; ++m)
+        for (int n = 0; n < 1001; ++n)
+            solu[m][n] = 0;
+    int N, V;
+    cin >> N >> V;
+    int volumn[1001], worth[1001];
+    for (int i = 0; i < N; ++i)
+        scanf("%d%d", &volumn[i], &worth[i]);
+    for (int n = 0; n <= V; ++n)
+        solu[0][n] = 0;
+    for (int m = 1; m <= N; ++m)
+        for (int n = 0; n <= V; ++n)
+            if (n < volumn[m] || solu[m - 1][n] > (solu[m - 1][n - volumn[m]] + worth[m]))
+                solu[m][n] = solu[m - 1][n];
+            else
+                solu[m][n] = solu[m - 1][n - volumn[m]] + worth[m];
+    cout << solu[N][V] << endl;
+    return 0;
 }
+
