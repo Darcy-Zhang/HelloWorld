@@ -11,7 +11,7 @@ int main()
     int N, V;
     cin >> N >> V;
     int volumn[1001], worth[1001];
-    for (int i = 0; i < N; ++i)
+    for (int i = 1; i <= N; ++i)
         scanf("%d%d", &volumn[i], &worth[i]);
     for (int n = 0; n <= V; ++n)
         solu[0][n] = 0;
