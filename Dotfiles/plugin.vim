@@ -10,4 +10,5 @@ Plug 'dense-analysis/ale'
 Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'derekwyatt/vim-fswitch'
+Plug 'puremourning/vimspector'
 call plug#end()
