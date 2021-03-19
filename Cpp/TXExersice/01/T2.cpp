@@ -1,28 +1,37 @@
+/*
+ * @Author       : Darcy
+ * @Date         : 2021-03-19 17:18:20
+ * @LastEditors  : Darcy
+ * @LastEditTime : 2021-03-19 17:28:57
+ * @FilePath     : \HelloWorld\Cpp\TXExersice\01\T2.cpp
+ * @Description  : <(￣︶￣)↗[GO!]
+ * https://github.com/Darcy-Zhang
+ */
 #include <iostream>
 #include <cstring>
 
 using namespace std;
 
 char temp;
+char origin[1000];
+char newarray[1000];
 int main()
 {
-    char * ins(char *p);
-    char origin[1000];
+    void convert(void);
     cin >> temp;
-    while(cin >> origin);
-    char * t = ins(origin);
-    cout << t;
+    cout << "输入字符串并以<C-z>结尾" << endl;
+    cin >> origin;
+    convert();
     return 0;
 }
 
-char * ins(char *p)
+void convert(void)
 {
-    size_t len = strlen(p);
-    char *t = new char[len * 2];
+    size_t len = strlen(origin);
     for (int x = 0; x < (int)len; ++x)
     {
-        t[2 * x] = p[x];
-        t[2 * x + 1] = temp;
+        newarray[2 * x] = origin[x];
+        newarray[2 * x + 1] = temp;
     }
-    return t;
+    cout << newarray;
 }

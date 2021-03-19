@@ -1,3 +1,12 @@
+/*
+ * @Author       : Darcy
+ * @Date         : 2021-03-19 17:18:20
+ * @LastEditors  : Darcy
+ * @LastEditTime : 2021-03-19 17:38:01
+ * @FilePath     : \HelloWorld\Cpp\TXExersice\01\T1.cpp
+ * @Description  : <(￣︶￣)↗[GO!]
+ * https://github.com/Darcy-Zhang
+ */
 #include <iostream>
 
 using namespace std;
