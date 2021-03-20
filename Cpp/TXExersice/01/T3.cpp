@@ -11,7 +11,7 @@
 #include <iostream>
 
 using namespace std;
-int origin[7][7];
+static int origin[7][7];
 int main()
 {
     for (int m = 0; m < 7; ++m)

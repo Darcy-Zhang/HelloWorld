@@ -12,9 +12,9 @@
 
 using namespace std;
 
-char temp;
-char origin[1000];
-char newarray[1000];
+static char temp;
+static char origin[1000];
+static char newarray[1000];
 int main()
 {
     void convert(void);
