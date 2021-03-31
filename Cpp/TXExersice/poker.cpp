@@ -2,7 +2,7 @@
  * @Author       : Darcy
  * @Date         : 2021-03-30 11:11:45
  * @LastEditors  : Darcy
- * @LastEditTime : 2021-03-30 11:58:40
+ * @LastEditTime : 2021-03-31 21:33:56
  * @FilePath     : \HelloWorld\Cpp\TXExersice\poker.cpp
  * @Description  : <(￣︶￣)↗[GO!]
  * https://github.com/Darcy-Zhang
@@ -58,18 +58,12 @@ void Poker::shuffle(void)
    int a, b;
    for (int i = 0; i < 1000; ++i)
    {
-      a = random();
-      b = random();
+      a = rand() % 52;
+      b = rand() % 52;
       swap(cards[a].rank, cards[b].rank);
       swap(cards[a].suits, cards[b].suits);
    }
    return;
-}
-
-int random(void)
-{
-   srand(time(NULL));
-   return rand() % 52;
 }
 
 int main()
