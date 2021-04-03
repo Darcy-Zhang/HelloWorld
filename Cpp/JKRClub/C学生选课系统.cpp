@@ -25,7 +25,7 @@ void init(sub *&L) //链表初始化
 }
 void choice(sub *&T) //学生选课
 {
-	sub *p = T, *pr;
+	sub *p = T;
 	int a, sum = 0;
 	printf("请输入你要选修的课程编号：");
 	scanf("%d", &a);
@@ -113,8 +113,6 @@ void savefile(sub *&T) //保存全部课程信息写入文件
 void readlist(sub *&T) //读取文件信息
 {
 	sub *p, *s = T;
-	int num, stime, ttime, etime, score, term;
-	char name[20], kind[10], fname[20];
 	FILE *fp;
 	fp = fopen("1.txt", "r");
 	while (!feof(fp))
@@ -235,8 +233,6 @@ void prin1(sub *&T)
 void inser(sub *&T) //添加课程信息
 {
 	sub *p, *h = T, *pr;
-	int a;
-	char ch, ch1, name[20];
 	while (h->next != NULL)
 	{
 		h = h->next;

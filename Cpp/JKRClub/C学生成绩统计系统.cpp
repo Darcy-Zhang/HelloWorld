@@ -91,7 +91,6 @@ Student *startCheck(void)
 	Student *pHead;
 	FILE *fp1;
 	char password[20] = "123456";
-	int i;
 
 	if ((fp1 = fopen("password.dat", "rb")) == NULL) //若密码文件不存在，新建密码文件
 	{
@@ -539,7 +538,6 @@ void del(Student *pHead)
 	Student *p1, *p2 = pHead;
 	int a;
 	int n, flag = 0;
-	char student_name[20], c;
 	a = delmenu();
 	if (a == 1)
 	{
@@ -765,7 +763,7 @@ void sort(Student *pHead) //排序
 	readListfromFile(pHead, "stud.dat"); //从文件中提取数据
 	int n = 0, j, k;
 	char c;
-	Student *p1, *p2;
+	Student *p1;
 	Student a[500], t;
 	p1 = pHead;
 	c = sortmenu();
