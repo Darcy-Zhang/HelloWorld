@@ -16,6 +16,7 @@ class Student
 {
 public:
    int rank;
+   int teamgrade;
    void setinfo(void);
    void printinfo(void);
    unsigned int getID(void);
