@@ -2,7 +2,7 @@
  * @Author       : Darcy
  * @Date         : 2021-04-09 16:35:38
  * @LastEditors  : Darcy
- * @LastEditTime : 2021-04-09 17:06:35
+ * @LastEditTime : 2021-04-09 21:44:22
  * @FilePath     : \HelloWorld\Cpp\TXExersice\04\T1.cpp
  * @Description  : <(￣︶￣)↗[GO!]
  * https://github.com/Darcy-Zhang
@@ -12,12 +12,12 @@ using namespace std;
 
 class ARR
 {
-public:
+ public:
    ARR(int x[], int size);
    void change(void);
    void show(void);
 
-private:
+ private:
    int n;
    int a[100];
 };
