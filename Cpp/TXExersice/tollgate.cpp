@@ -2,7 +2,7 @@
  * @Author       : Darcy
  * @Date         : 2021-04-06 11:13:47
  * @LastEditors  : Darcy
- * @LastEditTime : 2021-04-06 14:13:14
+ * @LastEditTime : 2021-04-09 21:37:12
  * @FilePath     : \HelloWorld\Cpp\TXExersice\tollgate.cpp
  * @Description  : <(￣︶￣)↗[GO!]
  * https://github.com/Darcy-Zhang
@@ -13,12 +13,12 @@ using namespace std;
 
 class Tollgate
 {
-public:
+ public:
    void input(void);
    void display(void);
    void charge(void);
 
-private:
+ private:
    const int bigcar = 10;
    const int smallcar = 5;
    int cash = 0;
