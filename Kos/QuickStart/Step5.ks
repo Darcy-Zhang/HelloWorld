@@ -1,0 +1,2 @@
+clearScreen.
+print "==HELLO WORLD==".

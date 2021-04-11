@@ -45,7 +45,7 @@ double RECT::peri() { return 2 * x + 2 * y; }
 
 int RECT::isSquare() { return (x == y) ? 1 : 0; }
 
-double CUB::volumn() { return area() * height; }
+double CUB::volume() { return area() * height; }
 
 double CUB::area() {}
 
